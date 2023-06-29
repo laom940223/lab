@@ -4,6 +4,7 @@ import App from './App.tsx'
 
 import { BrowserRouter } from 'react-router-dom'
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query'
+import { AuthContextProvider } from './context/auth-context.tsx'
 
 
 const queryClient = new QueryClient()
@@ -13,7 +14,9 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 
       <BrowserRouter>
         <QueryClientProvider client={queryClient}>
-            <App />
+            <AuthContextProvider>
+              <App />
+              </AuthContextProvider>
         </QueryClientProvider>
       </BrowserRouter>
 
