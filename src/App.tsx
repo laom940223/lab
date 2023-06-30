@@ -2,6 +2,8 @@ import { Routes, Route } from 'react-router-dom'
 import Home from './pages/home'
 import { ProtectedRoute } from './components/protectedRoute'
 import { Login } from './pages/login'
+import { Layout } from 'antd'
+import { AppLayout } from './components/appLayout'
 
 function App() {
   
@@ -13,7 +15,9 @@ function App() {
             <Route path='/' element={ 
             
               <ProtectedRoute>
-                <Home/>
+                <AppLayout>
+                    <Home/>
+                </AppLayout>
               </ProtectedRoute>
             } />
 
