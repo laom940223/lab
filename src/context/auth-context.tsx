@@ -54,6 +54,9 @@ export const AuthContextProvider = ({children} : {children: React.ReactNode})=>{
     const logIn = ( credentials : LoginCredentials )=>{
 
         setUser(  { id: 152, email:"test@test.com", name:"Test Name", initials:"TN", role:"ADMIN" })
+        console.log("user set")
+
+        
 
     }
 
